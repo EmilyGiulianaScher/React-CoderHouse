@@ -1,12 +1,13 @@
 import React from 'react';
-import NavBar from "./componentes/NavBar";
-import ItemListContainer from './componentes/ItemListContainer';
+import NavBar from "./componentes//navBar/NavBar";
+import ItemListContainer from './componentes/intemListContainer/ItemListContainer';
 
 const App = () => {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar/>
       <ItemListContainer greeting="¡Bienvenido a la tienda de empanadas!" />
+      
     </div>
   );
 };
