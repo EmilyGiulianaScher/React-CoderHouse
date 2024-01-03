@@ -1,0 +1,29 @@
+
+.cart-widget {
+    position: relative;
+  }
+  
+  .cart-widget button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 4px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

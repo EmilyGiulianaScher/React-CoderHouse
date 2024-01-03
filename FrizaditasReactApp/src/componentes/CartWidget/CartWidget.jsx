@@ -1,11 +1,13 @@
 import React from 'react';
+import { BsCart4 } from "react-icons/bs";
+import '../CartWidget/CartWidget.css'; // Importar el archivo CSS
 
 const CartWidget = () => {
-  const itemsInCart = 3;
+  const itemsInCart = 5;
 
   return (
     <div className="cart-widget">
-      <i className="fas fa-shopping-cart"></i>
+      <button><BsCart4 /></button>
       <span className="cart-items">{itemsInCart}</span>
     </div>
   );

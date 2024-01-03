@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "title": "Carne",
+      "price": 300,
+      "image": "imagenes/01-carne.jpg",
+      "description": "La más vendida",
+      "category": "Horneadas"
+    },
+    {
+      "id": 2,
+      "title": "Pollo",
+      "price": 200,
+      "image": "imagenes/02-pollo.jpg",
+      "description": "Sabor delicioso",
+      "category": "Horneadas"
+    },
+    {
+      "id": 3,
+      "title": "Jamón y Queso",
+      "price": 250,
+      "image": "imagenes/03-jyq-2.jpg",
+      "description": "Perfecta combinación",
+      "category": "Horneadas"
+    },
+    {
+      "id": 4,
+      "title": "Humita",
+      "price": 190,
+      "image": "imagenes/04-humita.jpg",
+      "description": "Sabor único",
+      "category": "Congeladas"
+    },
+    {
+      "id": 5,
+      "title": "Arabe",
+      "price": 220,
+      "image": "imagenes/05-arabe.jpg",
+      "description": "Bien picante",
+      "category": "Congeladas"
+    },
+    {
+      "id": 6,
+      "title": "Vegetariana",
+      "price": 210,
+      "image": "imagenes/06-vegetariana.jpg",
+      "description": "Saludable y deliciosa",
+      "category": "Horneadas"
+    },
+    {
+      "id": 7,
+      "title": "Pescado",
+      "price": 280,
+      "image": "imagenes/07-pescado.jpg",
+      "description": "Fresco y delicioso",
+      "category": "Congeladas"
+    },
+    {
+      "id": 8,
+      "title": "Margarita",
+      "price": 190,
+      "image": "imagenes/08-margarita.jpg",
+      "description": "Simple y deliciosa",
+      "category": "Horneadas"
+    },
+    {
+      "id": 9,
+      "title": "Calabresa",
+      "price": 240,
+      "image": "imagenes/09-calabresa.jpg",
+      "description": "Sabrosa y picante",
+      "category": "Horneadas"
+    },
+    {
+      "id": 10,
+      "title": "Cuatro Quesos",
+      "price": 260,
+      "image": "imagenes/10-cuatro-quesos.jpg",
+      "description": "Rica combinación de quesos",
+      "category": "Horneadas"
+    }
+  ]
+  
