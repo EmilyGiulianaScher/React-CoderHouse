@@ -1,19 +1,24 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  margin-top: 20px;
 }
 
-.product-card {
-  text-align: center;
-  border: none;
-  padding: 10px;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+
+
+.card {
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  margin-left: 10px;
+  height: 200px;
+  flex: 1;
+  transition: .3s all ease;
+}
+
+.card:hover{
+  flex: 2;
+  background-color: aqua;
 }
 
 .product-image {

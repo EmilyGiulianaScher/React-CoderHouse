@@ -1,27 +1,46 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import "../ItemListContainer/ItemListContainer.css";
-const ItemListContainer = ({greeting}) => {
+import { useParams } from 'react-router-dom'
+import arrayProductos from '../json/arrayProductos.json'
+import ItemList from '../ItemList/ItemList';
+
+
+
+const ItemListContainer = () => {
+
+  const [item, setItem] = useState([])
+  const { id } = useParams();
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(id ? arrayProductos.filter(item => item.category === id) : arrayProductos)
+          },);
+        });
+        setItem(data);
+
+      } catch (error) {
+        console.log('Error: ', error);
+      }
+    };
+    fetchData();
+
+  }, [id])
+
+
+
   return (
-    <div>
-      <h2 className='saludo'>{greeting}</h2>
+    <div className='container'>
+      <div className='row '>
+
+        <ItemList item = {item}/>
+
+      </div>
     </div>
   );
 };
+
 export default ItemListContainer;
-
-
-/*
-<div className="item-list-container">
-      <h2>{greeting}</h2>
-    </div>
-
-
-<ul>
-{products.map((product) => (
-  <li key={product.id}>
-    <p>{product.name}</p>
-    <p>Precio: ${product.price}</p>
-  </li>
-))}
-</ul>
-*/

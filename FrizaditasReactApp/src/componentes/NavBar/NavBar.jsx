@@ -15,13 +15,13 @@ function NavBar(){
               <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Congeladas">Empanadas Congeladas</Link>
+              <Link className="nav-link" to="/category/Congeladas">Empanadas Congeladas</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Horneadas">Empanadas Horneadas</Link>
+              <Link className="nav-link" to="/category/Horneadas">Empanadas Horneadas</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Otros">Otros</Link>
+              <Link className="nav-link" to="/category/Otros">Otros</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">   <CartWidget/>  </Link>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Empanadas = () => {
-  const [empanadas, setEmpanadas] = useState([
+  const [empanada, setEmpanadas] = useState([
     {
       id: 1,
       title: "Carne",

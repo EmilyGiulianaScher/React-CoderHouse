@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Carne",
       "price": 300,
-      "image": "imagenes/01-carne.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1FBYHPxle7P2-2MUSVvM9_ZdwgMWaBvLk",
       "description": "La más vendida",
       "category": "Horneadas"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "title": "Pollo",
       "price": 200,
-      "image": "imagenes/02-pollo.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1Omms5htlhE4F4Xyy2Y3IumLFdlBqqC2u",
       "description": "Sabor delicioso",
       "category": "Horneadas"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Jamón y Queso",
       "price": 250,
-      "image": "imagenes/03-jyq-2.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1S5g1hGwurJy6i90e9ZA8Z3xgv1KCvxtm",
       "description": "Perfecta combinación",
       "category": "Horneadas"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "title": "Humita",
       "price": 190,
-      "image": "imagenes/04-humita.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1yrezZkGebjZXzTe9K0i8JmYngZwEDHP_",
       "description": "Sabor único",
       "category": "Congeladas"
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "title": "Arabe",
       "price": 220,
-      "image": "imagenes/05-arabe.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1AZm-tITZzcycePu_JsLvrl1THJV5Vn7P",
       "description": "Bien picante",
       "category": "Congeladas"
     },
@@ -43,41 +43,41 @@
       "id": 6,
       "title": "Vegetariana",
       "price": 210,
-      "image": "imagenes/06-vegetariana.jpg",
-      "description": "Saludable y deliciosa",
+      "image": "https://drive.google.com/uc?export=download&id=1FyInEAeIkpfboR7wgqfacy3egenAbfZv",
+      "description": "Con jamon vegano",
       "category": "Horneadas"
     },
     {
       "id": 7,
       "title": "Pescado",
       "price": 280,
-      "image": "imagenes/07-pescado.jpg",
-      "description": "Fresco y delicioso",
+      "image": "https://drive.google.com/uc?export=download&id=1MMyvCUW3LjCSWSrVTytMIDOKV9P_Gl9Z",
+      "description": "Fresco y delicioso, de atun",
       "category": "Congeladas"
     },
     {
       "id": 8,
       "title": "Margarita",
       "price": 190,
-      "image": "imagenes/08-margarita.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1i142eQLyPYL3wHsa50ZTzJV0tpug7_j6",
       "description": "Simple y deliciosa",
-      "category": "Horneadas"
+      "category": "Otros"
     },
     {
       "id": 9,
       "title": "Calabresa",
       "price": 240,
-      "image": "imagenes/09-calabresa.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=15IWksGSh0NweC5pprKLPs1nE-UznmSlj",
       "description": "Sabrosa y picante",
-      "category": "Horneadas"
+      "category": "Otros"
     },
     {
       "id": 10,
       "title": "Cuatro Quesos",
       "price": 260,
-      "image": "imagenes/10-cuatro-quesos.jpg",
+      "image": "https://drive.google.com/uc?export=download&id=1QjdxqdyTc-nBNnvcZg_odL9ly_OCt9CI",
       "description": "Rica combinación de quesos",
-      "category": "Horneadas"
+      "category": "Otros"
     }
   ]
   
