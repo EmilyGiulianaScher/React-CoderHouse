@@ -1,0 +1,15 @@
+.cardItem{
+    border-style: none;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    background-color: rgb(248,249,250);
+}
+.precioItem{
+    background-color: rgb(242,158,32);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.115);
+    color: #ffffff;
+}
+.btnItem{
+text-align: center;
+}

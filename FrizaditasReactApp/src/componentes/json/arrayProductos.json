@@ -3,81 +3,101 @@
       "id": 1,
       "title": "Carne",
       "price": 300,
+      "stock": 15,
       "image": "https://drive.google.com/uc?export=download&id=1FBYHPxle7P2-2MUSVvM9_ZdwgMWaBvLk",
       "description": "La más vendida",
-      "category": "Horneadas"
+      "category": "Horneadas",
+      "info": "Deliciosa masa horneada rellena con sabrosa carne sazonada, cebolla picada y condimentos, ofreciendo un equilibrio perfecto entre la suavidad de la masa y el sabor carnoso en cada bocado."  
     },
     {
       "id": 2,
       "title": "Pollo",
       "price": 200,
+      "stock": 8,
       "image": "https://drive.google.com/uc?export=download&id=1Omms5htlhE4F4Xyy2Y3IumLFdlBqqC2u",
       "description": "Sabor delicioso",
-      "category": "Horneadas"
+      "category": "Horneadas",
+      "info": "Una exquisita combinación de pollo tierno y desmenuzado, mezclado con vegetales frescos y sazonado con especias que se envuelve en una masa horneada, ofreciendo una opción sabrosa y satisfactoria."
     },
     {
       "id": 3,
       "title": "Jamón y Queso",
       "price": 250,
+      "stock": 15,
       "image": "https://drive.google.com/uc?export=download&id=1S5g1hGwurJy6i90e9ZA8Z3xgv1KCvxtm",
       "description": "Perfecta combinación",
-      "category": "Horneadas"
+      "category": "Horneadas",
+      "info": "Una empanada horneada con un relleno reconfortante que combina el sabor salado del jamón con la cremosidad del queso derretido, creando una experiencia reconfortante y deliciosamente sabrosa."
     },
     {
       "id": 4,
       "title": "Humita",
       "price": 190,
+      "stock": 10,
       "image": "https://drive.google.com/uc?export=download&id=1yrezZkGebjZXzTe9K0i8JmYngZwEDHP_",
       "description": "Sabor único",
-      "category": "Congeladas"
+      "category": "Congeladas",
+      "info": "Una empanada congelada que lleva el delicioso relleno de humita, preparado con maíz tierno, cebolla, y condimentos, envuelto en una masa lista para hornear y disfrutar en cualquier momento."
     },
     {
       "id": 5,
       "title": "Arabe",
       "price": 220,
+      "stock": 10,
       "image": "https://drive.google.com/uc?export=download&id=1AZm-tITZzcycePu_JsLvrl1THJV5Vn7P",
       "description": "Bien picante",
-      "category": "Congeladas"
+      "category": "Congeladas",
+      "info": "Inspirada en sabores de Medio Oriente, esta empanada congelada contiene una mezcla única de carne sazonada con especias tradicionales, envuelta en una masa quebrada y lista para cocinar, ofreciendo una experiencia culinaria exótica y deliciosa."
     },
     {
       "id": 6,
       "title": "Vegetariana",
       "price": 210,
+      "stock": 4,
       "image": "https://drive.google.com/uc?export=download&id=1FyInEAeIkpfboR7wgqfacy3egenAbfZv",
       "description": "Con jamon vegano",
-      "category": "Horneadas"
+      "category": "Horneadas",
+      "info": "Una alternativa vegetal encantadora y saludable, repleta de verduras frescas como pimientos, cebollas, champiñones y espinacas sazonadas con hierbas aromáticas y envueltas en una masa horneada, proporcionando una opción deliciosa para los amantes de los vegetales."
     },
     {
       "id": 7,
       "title": "Pescado",
       "price": 280,
+      "stock": 2,
       "image": "https://drive.google.com/uc?export=download&id=1MMyvCUW3LjCSWSrVTytMIDOKV9P_Gl9Z",
       "description": "Fresco y delicioso, de atun",
-      "category": "Congeladas"
+      "category": "Congeladas",
+      "info": "Una opción única con un relleno de pescado fresco, sazonado con hierbas y especias, envuelto en una masa lista para hornear, ideal para aquellos que disfrutan de sabores marinos en un formato práctico."
     },
     {
       "id": 8,
       "title": "Margarita",
       "price": 190,
+      "stock": 5,
       "image": "https://drive.google.com/uc?export=download&id=1i142eQLyPYL3wHsa50ZTzJV0tpug7_j6",
       "description": "Simple y deliciosa",
-      "category": "Otros"
+      "category": "Otros",
+      "info": "Una clásica pizza italiana con una base de masa crujiente cubierta con salsa de tomate, rodajas de tomate maduro, fresca y cremosa mozzarella, salpicada con hojas de albahaca fresca, ofreciendo una explosión de sabores simples pero deliciosos."
     },
     {
       "id": 9,
       "title": "Calabresa",
       "price": 240,
+      "stock": 3,
       "image": "https://drive.google.com/uc?export=download&id=15IWksGSh0NweC5pprKLPs1nE-UznmSlj",
       "description": "Sabrosa y picante",
-      "category": "Otros"
+      "category": "Otros",
+      "info": "Una pizza con un toque picante que combina salsa de tomate, generosas porciones de pepperoni picante, rodajas de chorizo, cubiertas con queso mozzarella derretido, para los amantes de sabores intensos y ahumados."
     },
     {
       "id": 10,
       "title": "Cuatro Quesos",
       "price": 260,
+      "stock": 7,
       "image": "https://drive.google.com/uc?export=download&id=1QjdxqdyTc-nBNnvcZg_odL9ly_OCt9CI",
       "description": "Rica combinación de quesos",
-      "category": "Otros"
+      "category": "Otros",
+      "info": "Una pizza llena de sabor con una mezcla armoniosa de cuatro quesos distintos (mozzarella, parmesano, gorgonzola y provolone), ofreciendo una explosión de cremosidad y riqueza en cada bocado."
     }
   ]
   

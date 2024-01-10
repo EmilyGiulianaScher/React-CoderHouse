@@ -1,6 +1,13 @@
-
 h3{
   font-size: 20px;
   margin-left: 15px;
   color: rgb(254,80,45);
+}
+
+.button-container {
+  position: fixed;
+  z-index: 100;
+}
+body{
+  background-color: rgb(235,233,222);
 }

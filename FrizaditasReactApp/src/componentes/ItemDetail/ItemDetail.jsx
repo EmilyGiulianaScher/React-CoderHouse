@@ -1,25 +1,27 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import "../ItemDetail/ItemDetail.css"
 
 const ItemDetail = ({ item }) => {
     return (
-       
-        <div>
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={item.image} style={{ maxHeight: '200px', maxWidth: '100%', objectFit: 'cover' }} />
-            <Card.Body>
-                <Card.Title> {item.title} </Card.Title>
-                <Card.Text>
-                    <p>{item.category}</p>
-                    <p>$ {item.price}</p>
-                    <p>{item.description}</p>
-                </Card.Text>
-                <Button variant="primary">COMPRAR</Button>
-            </Card.Body>
-        </Card>
 
-    </div>
+        <div className='estructuraItemDetail'>
+            <div className='imgItemDetailCont'>
+                <img className='imgItemDetail' src={item.image} />
+            </div>
+            <div className='infoItemDetail'>
+                <h3 className='tituloItemDetail'> {item.title} </h3>
+                <div className='infoDescItemDetail'>
+                    <p className='categoriaItemDetail'>{item.category}</p>
+                    <p className='precioItemDetail'>$ {item.price}</p>
+                    <p>{item.info}</p>
+                    <p>{item.stock} docenas en stock</p>
+                </div>
+                <Button className='botoncito'> AGREGAR AL CARRITO</Button>
+            </div>
+
+        </div>
 
     );
 };
