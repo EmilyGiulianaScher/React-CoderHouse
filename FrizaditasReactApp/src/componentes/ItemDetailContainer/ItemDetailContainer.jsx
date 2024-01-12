@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
-import arrayProductos from '../json/arrayProductos.json'
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
-
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
@@ -10,26 +9,19 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(arrayProductos.find(item=> item.id === parseInt(id)))
-            },)
-        })
-        promesa.then((data)=> {
-            setItem(data)
-        })
-
-    }, [id])
-
+        const queryDb = getFirestore();
+        const queryDoc = doc(queryDb, 'products', id);
+        getDoc(queryDoc).then((res)=>
+        setItem({id: res.id, ...res.data()})
+        )
+    
+      }, [id])
 
 
     return (
         <div className='container'>
             <div className='row'>
-
                 <ItemDetail item={item} />
-
-
             </div>
         </div>
     );

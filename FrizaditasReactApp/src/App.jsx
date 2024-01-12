@@ -5,6 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import PublicidadIg from "./componentes/PublicidadIg/PublicidadIg";
+import CartProvider from "./componentes/Context/CartContext";
+import CarouselHome from "./componentes/Carrusel/Carrusel";
+import Cart from './componentes/Cart/Cart';
+import { CheckOut } from "./componentes/Checkout/CheckOut";
 
 const App = () => {
   const [toggle, setToggle] = useState(true);
@@ -12,15 +16,20 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path={"/"} element={<ItemListContainer />} />
-          <Route path={"/category/:id"} element={<ItemListContainer />} />
-          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-          <Route path={"*"} element={<Error />} />
-        </Routes>
-      </BrowserRouter>
+        <CartProvider>
+          <NavBar />
+          <CarouselHome />
 
+          <Routes>
+            <Route path={"/"} element={<ItemListContainer />} />
+            <Route path={"/category/:id"} element={<ItemListContainer />} />
+            <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+            <Route path={"/cart"} element={<Cart />} />
+            <Route path={"/checkOut"} element={<CheckOut />} />
+            <Route path={"*"} element={<Error />} />
+          </Routes>
+        </CartProvider>
+      </BrowserRouter>
 
       <div>
         {toggle && <PublicidadIg />}
@@ -30,9 +39,6 @@ const App = () => {
           </button>
         </div>
       </div>
-
-
-
     </div>
   );
 };

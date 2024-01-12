@@ -13,3 +13,8 @@
 .btnItem{
 text-align: center;
 }
+.imagenCard{
+    max-width: 250px;
+    max-Height: 140px;
+    
+}

@@ -9,14 +9,14 @@ const Item = ({ item }) => {
         <Link to={'/item/' + item.id} className='text-decoration-none'>
             
             <Card style={{ width: '15rem' }} className="m-5  p-2  cardItem">
-                <Card.Img variant="top" src={item.image} style={{ maxHeight: '200px', maxWidth: '100%', objectFit: 'cover' }} />
+                <Card.Img variant="top" src={item.image} className='imagenCard' />
                 <Card.Body>
                     <Card.Title> {item.title} </Card.Title>
-                    <Card.Text>
+                    <div>
                         <p>{item.category}</p>
                         <p className='precioItem'>$ {item.price}</p>
                         <p>{item.description}</p>
-                    </Card.Text>
+                    </div>
                     <div className=' btnItem'>
                     <Button className='botoncito'>COMPRAR</Button>
                     </div>

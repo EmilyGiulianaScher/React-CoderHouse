@@ -1,14 +1,15 @@
 import React from 'react';
 import { BsCart4 } from "react-icons/bs";
-import '../CartWidget/CartWidget.css'; // Importar el archivo CSS
+import '../CartWidget/CartWidget.css'; 
+import {useCartContext} from '../Context/CartContext';
 
 const CartWidget = () => {
-  const itemsInCart = 5;
+  const {totalProducts, cart} = useCartContext();
 
   return (
     <div className="cart-widget">
-      <button><BsCart4 /></button>
-      <span className="cart-items">{itemsInCart}</span>
+      <button><BsCart4/></button>
+      <span className="cart-items">{totalProducts() || cart}</span>
     </div>
   );
 };

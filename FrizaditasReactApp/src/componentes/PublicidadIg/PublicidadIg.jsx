@@ -10,13 +10,13 @@ const PublicidadIg = () => {
     return () => {
       window.removeEventListener("resize", onResize);
     };
-  }, {});
+  }, []);
 
   return (
     <div className="instagram-ad">
 
       <a href="https://www.instagram.com/frizaditas.ctes/" target="blanck">
-        <i class="bx bxl-instagram bx-md"></i>
+        <i className="bx bxl-instagram bx-md"></i>
         <p> click aqui </p>
       </a>
     </div>

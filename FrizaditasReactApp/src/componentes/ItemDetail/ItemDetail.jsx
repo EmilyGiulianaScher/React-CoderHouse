@@ -1,9 +1,18 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import "../ItemDetail/ItemDetail.css"
+import React, { useState } from 'react';
+import "../ItemDetail/ItemDetail.css";
+import { useCartContext } from '../Context/CartContext';
+import ItemCount from '../ItemCount/ItemCount';
+
 
 const ItemDetail = ({ item }) => {
+    const [goToCart, setGoToCart] = useState(false);
+    const { addProduct } = useCartContext()
+    const onAdd = (quantity) => {
+        setGoToCart(true);
+        addProduct(item, quantity);
+
+    }
+
     return (
 
         <div className='estructuraItemDetail'>
@@ -18,11 +27,12 @@ const ItemDetail = ({ item }) => {
                     <p>{item.info}</p>
                     <p>{item.stock} docenas en stock</p>
                 </div>
-                <Button className='botoncito'> AGREGAR AL CARRITO</Button>
+                <div>
+                    {goToCart ? <Link to='/cart'>Terminar compra</Link> : <ItemCount stock={10} initial={1} onAdd={onAdd} />}
+                </div>
             </div>
 
         </div>
-
     );
 };
 
