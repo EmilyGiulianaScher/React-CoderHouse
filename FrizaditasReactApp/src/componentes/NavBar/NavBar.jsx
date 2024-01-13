@@ -1,37 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import CartWidget from '../CartWidget/CartWidget';
-import Icono from './Icono/Icono';
+import React from "react";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
+import Icono from "./Icono/Icono";
 
-function NavBar(){
+function NavBar() {
   return (
-    <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link className="navbar-brand" to="/"> <Icono/> </Link>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/Congeladas">Empanadas Congeladas</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/Horneadas">Empanadas Horneadas</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/Otros">Otros</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/cart">   <CartWidget/>  </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    </>
+    <Navbar expand="lg" className="bg-light">
+      <Container>
+        <Link className="navbar-brand" to="/">
+          <Icono />
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+            <Link className="nav-link" to="/category/Congeladas">
+              Empanadas Congeladas
+            </Link>
+            <Link className="nav-link" to="/category/Horneadas">
+              Empanadas Horneadas
+            </Link>
+            <Link className="nav-link" to="/category/Otros">
+              Otros
+            </Link>
+          </Nav>
+          <Nav>
+            <Link className="nav-link" to="/cart">
+              <CartWidget />
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default NavBar;

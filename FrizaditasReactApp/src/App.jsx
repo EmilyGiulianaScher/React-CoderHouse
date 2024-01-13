@@ -7,8 +7,10 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import PublicidadIg from "./componentes/PublicidadIg/PublicidadIg";
 import CartProvider from "./componentes/Context/CartContext";
 import CarouselHome from "./componentes/Carrusel/Carrusel";
-import Cart from './componentes/Cart/Cart';
+import Cart from "./componentes/Cart/Cart";
 import { CheckOut } from "./componentes/Checkout/CheckOut";
+import Error from './componentes/Error';
+
 
 const App = () => {
   const [toggle, setToggle] = useState(true);
@@ -18,15 +20,21 @@ const App = () => {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
-          <CarouselHome />
 
           <Routes>
-            <Route path={"/"} element={<ItemListContainer />} />
+            <Route
+              path={"/"}
+              element={
+                <>
+                  <CarouselHome /> <ItemListContainer />
+                </>
+              }
+            />
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
             <Route path={"/cart"} element={<Cart />} />
             <Route path={"/checkOut"} element={<CheckOut />} />
-            <Route path={"*"} element={<Error />} />
+            <Route path={'*'} element={<Error />} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
@@ -35,10 +43,12 @@ const App = () => {
         {toggle && <PublicidadIg />}
         <div className="button-container">
           <button className="toggle-button" onClick={() => setToggle(!toggle)}>
-            {toggle ? "Quitar" : "Mostrar"} publicidad
+            {toggle ? "📸​❌​" : "📸​↕️​"}
           </button>
         </div>
       </div>
+
+  
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import '../ItemCount/ItemCount.css';
 
 const ItemCount = ({ initial, stock, onAdd }) => {
 	const [count, setCount] = useState(parseInt(initial));
@@ -20,7 +20,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 			<button disabled={count <= 1} onClick={decrease} className="operacion">
 				-
 			</button>
-			<span>{count}</span>
+			<span className="numerillo">{count}</span>
 			<button disabled={count >= stock} onClick={increase} className="operacion">
 				+
 			</button>

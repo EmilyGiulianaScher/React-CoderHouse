@@ -1,32 +1,32 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 
-const CartContext = React.createContext('');
+const CartContext = React.createContext("");
 export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  const addProduct = (item, stock) => {
+  const addProduct = (item, quantity) => {
     if (isInCart(item.id)) {
       setCart(
         cart.map((product) => {
           return product.id === item.id
-            ? { ...product, stock: product.stock + stock }
+            ? { ...product, quantity: product.quantity + quantity }
             : product;
         })
       );
     } else {
-      setCart([...cart, { ...item, stock }]);
+      setCart([...cart, { ...item, quantity }]);
     }
   };
 
   const totalPrice = () => {
-    return cart.reduce((prev, act) => prev + act.stock * act.price, 0);
+    return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
   };
 
   const totalProducts = () =>
     cart.reduce(
-      (acumulador, productoActual) => acumulador + productoActual.stock,
+      (acumulador, productoActual) => acumulador + productoActual.quantity,
       0
     );
 

@@ -1,0 +1,46 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .lab-check {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  
+  }
+  
+  .input-check {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
+  }
+  
+  .enviarBoton {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .enviarBoton:hover {
+    background-color: #2980b9;
+  }
+
+.tituloCompra{
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+
+}

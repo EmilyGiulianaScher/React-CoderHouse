@@ -2,30 +2,30 @@ import Carousel from "react-bootstrap/Carousel";
 import "../Carrusel/Carrusel.css";
 function CarouselHome() {
   return (
-    <Carousel >
+    <div className="fondoCarro">
+ <Carousel className="Carrete">
       <Carousel.Item interval={3000}>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/01-carne.jpg?alt=media&token=1688ea23-b545-4822-9895-fc8839aebb83" alt="carne" />
+          src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/3.png?alt=media&token=9ef3d87d-c641-4e1d-8009-5a210081be9b" alt="1" />
         <Carousel.Caption>
-          <h3>Descubre nuestras empanadas horneadas</h3>
-          <p>Con delicioso relleno y una mezcla de sabores irresistibles.</p>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000}>
-        <img src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/Congelada-01.webp?alt=media&token=0bf37691-beb0-4e12-ace7-10d7ac997a17" alt="pescado"/>
+        <img src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/2.png?alt=media&token=e96db4f7-a929-4308-a03c-7530ec313e1f" alt="2"/>
         <Carousel.Caption>
-          <h3>Prueba nuestras empanadas congeladas </h3>
-          <p>Saludables y listas para cocinar en la comodidad de tu hogar.</p>
+         
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={3000}>
-        <img src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/pizza-margarita.jpg?alt=media&token=07d2e210-c841-454e-baff-7b808a370588" alt="pescado" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/frizaditas-e-commerce.appspot.com/o/1.png?alt=media&token=fbaeee64-33d9-47bb-a939-0e4550e76acb" alt="3" />
         <Carousel.Caption>
-          <h3>Disfruta de nuestras exquisitas pizzas </h3>
-          <p>El equilibrio perfecto entre los ingredientes.</p>
+         
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
+   
   );
 }
 
