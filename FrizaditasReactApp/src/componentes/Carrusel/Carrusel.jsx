@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import "../Carrusel/Carrusel.css";
+import React from 'react'
 function CarouselHome() {
   return (
     <div className="fondoCarro">

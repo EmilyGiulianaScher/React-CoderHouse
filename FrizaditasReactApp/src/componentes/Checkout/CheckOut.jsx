@@ -1,29 +1,38 @@
-import { useState } from "react";
-import { useCartContext } from "../Context/CartContext";
-import {getFirestore,collection,addDoc,updateDoc,doc,getDoc,} from "firebase/firestore";
-import "../Checkout/CheckOut.css";
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+import { useCartContext } from '../Context/CartContext';
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  updateDoc,
+  doc,
+  getDoc,
+} from 'firebase/firestore';
+import '../Checkout/CheckOut.css';
 
 export const CheckOut = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [email, setEmail] = useState("");
-  const [emailConfirmacion, setEmailConfirmacion] = useState("");
-  const [error, setError] = useState("");
-  const [ordenId, setOrdenId] = useState("");
-  const [mensaje, setMensaje] = useState("");
+  const [nombre, setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailConfirmacion, setEmailConfirmacion] = useState('');
+  const [error, setError] = useState('');
+  const [ordenId, setOrdenId] = useState('');
+  const [mensaje, setMensaje] = useState('');
   const { cart, totalPrice, removeProduct } = useCartContext();
 
-  const manejadorFormulario = (event) => {
+  const manejadorFormulario = async (event) => {
     event.preventDefault();
 
     if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
-      setError("Por favor complete todos los campos requeridos");
+      setError('Por favor complete todos los campos requeridos');
       return;
     }
 
     if (email !== emailConfirmacion) {
-      setError("Los email no coinciden");
+      setError('Los emails no coinciden');
       return;
     }
 
@@ -41,56 +50,73 @@ export const CheckOut = () => {
       telefono,
       email,
     };
-    Promise.all(
-      orden.items.map(async (productoOrden) => {
-        const db = getFirestore();
-        const productoRef = doc(db, "products", productoOrden.id);
 
-        const productoDoc = await getDoc(productoRef);
-        const stockActual = productoDoc.data().stock;
+    try {
+      await Promise.all(
+        orden.items.map(async (productoOrden) => {
+          const db = getFirestore();
+          const productoRef = doc(db, 'products', productoOrden.id);
 
-        await updateDoc(productoRef, {
-          stock: stockActual - productoOrden.cantidad,
-        });
-      })
-    )
-      .then(() => {
-        const db = getFirestore();
-        addDoc(collection(db, "orders"), orden)
-          .then((docRef) => {
-            setOrdenId(docRef.id);
-            removeProduct();
-          })
-          .catch((error) => {
-            console.log("No se pudo crear la orden", error);
-            setError("Error en la orden");
+          const productoDoc = await getDoc(productoRef);
+          const stockActual = productoDoc.data().stock;
+
+          await updateDoc(productoRef, {
+            stock: stockActual - productoOrden.cantidad,
           });
-      })
-      .catch((error) => {
-        console.log("No se puede actualizar el stock", error);
-        setError("No se actualizo el stock");
+        })
+      );
+
+      const db = getFirestore();
+      const docRef = await addDoc(collection(db, 'orders'), orden);
+
+      Swal.fire({
+        title: '¡Compra Exitosa!',
+        text: `Tu número de seguimiento es: ${docRef.id}`,
+        icon: 'success',
+        confirmButtonText: 'OK',
+        
       });
 
-    setNombre("");
-    setApellido("");
-    setTelefono("");
-    setEmail("");
-    setEmailConfirmacion("");
-    setMensaje("");
+      setOrdenId(docRef.id);
+      removeProduct();
+    } catch (error) {
+      console.error('Error:', error);
+
+      Swal.fire({
+        title: 'Error en la compra',
+        text:
+          'Hubo un problema al procesar tu orden. Por favor, inténtalo de nuevo.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
+
+      setError('Error en la orden');
+    }
+
+    setNombre('');
+    setApellido('');
+    setTelefono('');
+    setEmail('');
+    setEmailConfirmacion('');
+    setMensaje('');
   };
+
   return (
     <div>
-      <h2 className="tituloCompra"> ✨​Complete el formulario para confirmar la compra ✨​</h2>
+      <h2 className="tituloCompra">
+        ✨​Complete el formulario para confirmar la compra ✨​
+      </h2>
       <form onSubmit={manejadorFormulario}>
         {cart.map((producto) => (
           <div key={producto.id}>
             <p>
-              {""} {producto.nombre} {producto.cantidad}
+              {''} {producto.nombre} {producto.cantidad}
             </p>
             <p>{producto.precio}</p>
           </div>
         ))}
 
+        {/* Resto del código del formulario */}
         <div>
           <label className="lab-check">Nombre:</label>
           <input
@@ -145,14 +171,14 @@ export const CheckOut = () => {
         {ordenId && (
           <p>
             {" "}
-            ¡Gracias por tu compra ! Tu numero de seguimiento es: <br /> {
-              ""
-            }{" "}
-            {ordenId} {""} <br />
+            ¡Gracias por tu compra! Tu número de seguimiento es: <br /> {''}{' '}
+            {ordenId} {''} <br />
           </p>
         )}
         <div>
-          <button type="submit" className="enviarBoton"> Enviar </button>
+          <button type="submit" className="enviarBoton">
+            Enviar
+          </button>
         </div>
       </form>
     </div>

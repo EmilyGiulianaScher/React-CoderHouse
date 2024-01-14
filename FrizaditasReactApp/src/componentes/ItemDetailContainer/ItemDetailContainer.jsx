@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import React from 'react';
 
 const ItemDetailContainer = () => {
 
@@ -27,4 +28,4 @@ const ItemDetailContainer = () => {
     );
 };
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
